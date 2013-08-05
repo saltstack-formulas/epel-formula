@@ -1,0 +1,48 @@
+# A lookup table for EPEL GPG keys & RPM URLs for various RedHat releases
+{% set _rh_rel = {
+  'CentOS5': [
+    'https://fedoraproject.org/static/A4D647E9.txt',
+    'md5=a1d12cd9628338ddb12e9561f9ac1d6a',
+    'http://fedora-epel.mirror.lstn.net/5/i386/epel-release-5-4.noarch.rpm_',
+  ],
+  'CentOS6': [
+    'https://fedoraproject.org/static/0608B895.txt',
+    'md5=eb8749ea67992fd622176442c986b788',
+    'http://mirror.itc.virginia.edu/fedora-epel/6/i386/epel-release-6-8.noarch.rpm',
+  ],
+  'Fedora17': [],
+  'Fedora18': [],
+  'Fedora19': [],
+} %}
+
+
+# Pull the current OS & version from grains
+{% macro get_os() -%}
+{{ grains['osfullname'] ~ grains['osrelease'].partition('.')[0] }}
+{%- endmacro %}
+
+# Pulls key / RPM from the above structure for the current OS
+{% macro get_key(os_ident) -%}
+{{ _rh_rel[os_ident][0] }}
+{%- endmacro %}
+
+{% macro get_key_hash(os_ident) -%}
+{{ _rh_rel[os_ident][1] }}
+{%- endmacro %}
+
+{% macro get_rpm(os_ident) -%}
+{{ _rh_rel[os_ident][2] }}
+{%- endmacro %}
+
+# Replace macro calls below with the http:// or salt:// URL to the key/RPM
+# files for your OS or copy this whole file verbatim into your pillar
+epel:
+  # URL to the EPEL RPM to install
+  rpm: {{ get_rpm(get_os()) }}
+
+  # URL to the EPEL GPG key
+  pubkey: {{ get_key(get_os()) }}
+  pubkey_hash: {{ get_key_hash(get_os()) }}
+
+  # Disable repo so requires the --enablerepo flag to use
+  disabled: false
