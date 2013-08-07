@@ -17,7 +17,8 @@
 {{ _rh_rel[grains['osfinger']][thing] }}
 {%- endmacro %}
 
-{% if grains['os_family'] == 'RedHat' %}
+# Completely ignore non-CentOS, non-RHEL systems
+{% if grains['osfullname'] in ('CentOS', 'RHEL') %}
 install_pubkey:
   file:
     - managed
