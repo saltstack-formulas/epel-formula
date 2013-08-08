@@ -24,7 +24,7 @@ install_pubkey:
     - managed
     - name: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL
     - source: {{ salt['pillar.get']('epel:pubkey', lookup('key')) }}
-    - source_hash:  {{ salt['pillar.get']('epel:pubkey_hash', lookup('key_hash') }}
+    - source_hash:  {{ salt['pillar.get']('epel:pubkey_hash', lookup('key_hash')) }}
 
 install_rpm:
   pkg:
