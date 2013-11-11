@@ -25,7 +25,7 @@ install_rpm:
   pkg:
     - installed
     - sources:
-      - rpm: {{ salt['pillar.get']('epel:rpm', pkg.rpm) }}
+      - epel-release: {{ salt['pillar.get']('epel:rpm', pkg.rpm) }}
     - requires:
       - file: install_pubkey
 
