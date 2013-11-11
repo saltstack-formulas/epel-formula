@@ -30,12 +30,20 @@ install_rpm:
       - file: install_pubkey
 
 {% if salt['pillar.get']('epel:disabled', False) %}
+enable_epel:
+  file:
+    - sed
+    - name: /etc/yum.repos.d/epel.repo
+    - limit: '^enabled'
+    - before: [0,1]
+    - after: 1
+{% else %}
 disable_epel:
   file:
     - sed
     - name: /etc/yum.repos.d/epel.repo
     - limit: '^enabled'
-    - before: 1
+    - before: [0,1]
     - after: 0
 {% endif %}
 {% endif %}
