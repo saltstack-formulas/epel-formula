@@ -1,7 +1,7 @@
 epel
 ====
 
-Install the EPEL RPM and GPG key on RHEL 5/6 or CentOS 5/6.
+Install the EPEL RPM and GPG key on RHEL 5/6, CentOS 5/6 or Oracle Linux 5/6.
 
 .. note::
 
