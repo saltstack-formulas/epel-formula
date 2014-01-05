@@ -14,7 +14,7 @@
 {% endif %}
 
 # Completely ignore non-RHEL based systems
-{% if grains['osfullname'] in ('CentOS', 'RHEL', 'Oracle Linux Server') %}
+{% if grains['os_family'] == 'RedHat' %}
 install_pubkey:
   file:
     - managed
