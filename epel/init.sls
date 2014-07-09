@@ -11,6 +11,12 @@
     'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
     'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm',
   } %}
+{% elif grains['os'] == 'Amazon' and grains['osmajorrelease'][0] == '2014' %}
+  {% set pkg = {
+    'key': 'https://fedoraproject.org/static/0608B895.txt',
+    'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
+    'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm',
+  } %}
 {% endif %}
 
 # Completely ignore non-RHEL based systems
