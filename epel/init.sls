@@ -32,7 +32,7 @@ epel_release:
   pkg:
     - installed
     - sources:
-      - epel_release: {{ salt['pillar.get']('epel:rpm', pkg.rpm) }}
+      - epel-release: {{ salt['pillar.get']('epel:rpm', pkg.rpm) }}
     - requires:
       - file: install_pubkey
 
