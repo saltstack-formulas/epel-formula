@@ -28,7 +28,7 @@ install_pubkey:
     - source: {{ salt['pillar.get']('epel:pubkey', pkg.key) }}
     - source_hash:  {{ salt['pillar.get']('epel:pubkey_hash', pkg.key_hash) }}
 
-epel-release:
+epel_release:
   pkg:
     - installed
     - sources:
