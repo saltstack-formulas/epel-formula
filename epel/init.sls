@@ -1,3 +1,6 @@
+# Completely ignore non-RHEL based systems
+{% if grains['os_family'] == 'RedHat' %}
+
 # A lookup table for EPEL GPG keys & RPM URLs for various RedHat releases
 {% if grains['osmajorrelease'][0] == '5' %}
   {% set pkg = {
@@ -19,8 +22,7 @@
   } %}
 {% endif %}
 
-# Completely ignore non-RHEL based systems
-{% if grains['os_family'] == 'RedHat' %}
+
 install_pubkey:
   file:
     - managed
