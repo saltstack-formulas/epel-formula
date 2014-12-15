@@ -30,15 +30,13 @@
 
 
 install_pubkey:
-  file:
-    - managed
+  file.managed:
     - name: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL
     - source: {{ salt['pillar.get']('epel:pubkey', pkg.key) }}
     - source_hash:  {{ salt['pillar.get']('epel:pubkey_hash', pkg.key_hash) }}
 
 epel_release:
-  pkg:
-    - installed
+  pkg.installed:
     - sources:
       - epel-release: {{ salt['pillar.get']('epel:rpm', pkg.rpm) }}
     - requires:
@@ -46,16 +44,14 @@ epel_release:
 
 {% if salt['pillar.get']('epel:disabled', False) %}
 disable_epel:
-  file:
-    - sed
+  file.sed:
     - name: /etc/yum.repos.d/epel.repo
     - limit: '^enabled'
     - before: [0,1]
     - after: 0
 {% else %}
 enable_epel:
-  file:
-    - sed
+  file.sed:
     - name: /etc/yum.repos.d/epel.repo
     - limit: '^enabled'
     - before: [0,1]
