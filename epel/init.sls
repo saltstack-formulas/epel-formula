@@ -44,17 +44,15 @@ epel_release:
 
 {% if salt['pillar.get']('epel:disabled', False) %}
 disable_epel:
-  file.sed:
+  file.replace:
     - name: /etc/yum.repos.d/epel.repo
-    - limit: '^enabled'
-    - before: [0,1]
-    - after: 0
+    - pattern: '^enabled=[0,1]'
+    - repl: 'enabled=0'
 {% else %}
 enable_epel:
-  file.sed:
+  file.replace:
     - name: /etc/yum.repos.d/epel.repo
-    - limit: '^enabled'
-    - before: [0,1]
-    - after: 1
+    - pattern: '^enabled=[0,1]'
+    - repl: 'enabled=1'
 {% endif %}
 {% endif %}
