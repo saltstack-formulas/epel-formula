@@ -29,7 +29,7 @@
 {% endif %}
 
 
-install_pubkey:
+install_pubkey_epel:
   file.managed:
     - name: /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL
     - source: {{ salt['pillar.get']('epel:pubkey', pkg.key) }}
@@ -40,7 +40,7 @@ epel_release:
     - sources:
       - epel-release: {{ salt['pillar.get']('epel:rpm', pkg.rpm) }}
     - requires:
-      - file: install_pubkey
+      - file: install_pubkey_epel
 
 {% if salt['pillar.get']('epel:disabled', False) %}
 disable_epel:
