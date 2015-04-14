@@ -40,7 +40,7 @@ epel_release:
   pkg.installed:
     - sources:
       - epel-release: {{ salt['pillar.get']('epel:rpm', pkg.rpm) }}
-    - requires:
+    - require:
       - file: install_pubkey_epel
 
 set_pubkey_epel:
@@ -49,8 +49,8 @@ set_pubkey_epel:
     - name: /etc/yum.repos.d/epel.repo
     - pattern: '^gpgkey=.*'
     - repl: 'gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL'
-    - requires:
-      - pkg: epel-release
+    - require:
+      - pkg: epel_release
 
 set_gpg_epel:
   file.replace:
@@ -58,8 +58,8 @@ set_gpg_epel:
     - name: /etc/yum.repos.d/epel.repo
     - pattern: 'gpgcheck=.*'
     - repl: 'gpgcheck=1'
-    - requires:
-      - pkg: epel-release
+    - require:
+      - pkg: epel_release
 
 {% if salt['pillar.get']('epel:disabled', False) %}
 disable_epel:
