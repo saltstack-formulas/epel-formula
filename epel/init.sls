@@ -4,29 +4,29 @@
 # A lookup table for EPEL GPG keys & RPM URLs for various RedHat releases
 {% if grains['osmajorrelease'][0] == '5' %}
   {% set pkg = {
-    'key': 'https://fedoraproject.org/static/A4D647E9.txt',
-    'key_hash': 'md5=a1d12cd9628338ddb12e9561f9ac1d6a',
+    'key': 'https://getfedora.org/static/A4D647E9.txt',
+    'key_hash': 'sha256=664c06f579d914f2cf25d05d4d581b8ddec77cae4f72f4020c3a9264b9d5ee71',
     'key_name': 'RPM-GPG-KEY-EPEL-5',
     'rpm': 'http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm',
   } %}
 {% elif grains['osmajorrelease'][0] == '6' %}
   {% set pkg = {
-    'key': 'https://fedoraproject.org/static/0608B895.txt',
-    'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
+    'key': 'https://getfedora.org/static/0608B895.txt',
+    'key_hash': 'sha256=16d35fa467c6efcee21d3aa068a02054b6a89a7a33bffa94db1fc141693d62a3',
     'key_name': 'RPM-GPG-KEY-EPEL-6',
     'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm',
   } %}
 {% elif grains['osmajorrelease'][0] == '7' %}
   {% set pkg = {
-    'key': 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7',
-    'key_hash': 'md5=58fa8ae27c89f37b08429f04fd4a88cc',
+    'key': 'https://getfedora.org/static/352C64E5.txt',
+    'key_hash': 'sha256=22f25ad95d5e8d371760815485dba696ea3002fc2c7f812f2c75276853387107',
     'key_name': 'RPM-GPG-KEY-EPEL-7',
     'rpm': 'http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm',
   } %}
 {% elif grains['os'] == 'Amazon' and grains['osmajorrelease'] in ['2014', '2015', '2016' ]  %}
   {% set pkg = {
     'key': 'https://fedoraproject.org/static/0608B895.txt',
-    'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
+    'key_hash': 'sha256=16d35fa467c6efcee21d3aa068a02054b6a89a7a33bffa94db1fc141693d62a3',
     'key_name': 'RPM-GPG-KEY-EPEL-6',
     'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm',
   } %}
