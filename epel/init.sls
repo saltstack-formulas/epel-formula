@@ -23,14 +23,7 @@
     'key_name': 'RPM-GPG-KEY-EPEL-7',
     'rpm': 'http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm',
   } %}
-{% elif grains['os'] == 'Amazon' and grains['osmajorrelease'] == '2014' %}
-  {% set pkg = {
-    'key': 'https://fedoraproject.org/static/0608B895.txt',
-    'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
-    'key_name': 'RPM-GPG-KEY-EPEL-6',
-    'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm',
-  } %}
-{% elif grains['os'] == 'Amazon' and grains['osmajorrelease'] == '2015' %}
+{% elif grains['os'] == 'Amazon' and grains['osmajorrelease'] in ['2014', '2015', '2016' ]  %}
   {% set pkg = {
     'key': 'https://fedoraproject.org/static/0608B895.txt',
     'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
