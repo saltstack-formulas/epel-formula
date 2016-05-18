@@ -41,7 +41,11 @@
   %}
 {% endif %}
 
-# merge default and pillar data
+# merge defaults
 {% do epel.update(os_map) %}
 
+# keeps legacy epel pillar , to be removed at a later time
 {% do epel.update(salt['pillar.get']('epel')) %}
+
+# merge pillar data from epel:lookup subkey
+{% do epel.update(salt['pillar.get']('epel:lookup')) %}
