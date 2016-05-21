@@ -1,23 +1,14 @@
-# Enable by default
-{% set epel={
-  'disabled': False,
-  'key_name': 'RPM-GPG-KEY-EPEL',
-}
- %}
-
-# specific map for Amazon linux
-{% if grains['os'] == 'Amazon' and grains['osmajorrelease'] in ['2014', '2015', '2016' ]  %}
-  {% set os_map = {
-    'key': 'https://fedoraproject.org/static/0608B895.txt',
-    'key_hash': 'sha256=16d35fa467c6efcee21d3aa068a02054b6a89a7a33bffa94db1fc141693d62a3',
-    'key_name': 'RPM-GPG-KEY-EPEL-6',
-    'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm',
-  } %}
-
-{% else %}
-
-# A lookup table for EPEL GPG keys & RPM URLs for various RedHat releases
-  {% set os_map = salt['grains.filter_by']({
+{% set epel= salt['grains.filter_by'] ({
+    'common':{
+      'disabled': False,
+    },
+    'Amazon': {
+      'key': 'https://fedoraproject.org/static/0608B895.txt',
+      'key_hash': 'sha256=16d35fa467c6efcee21d3aa068a02054b6a89a7a33bffa94db1fc141693d62a3',
+      'key_name': 'RPM-GPG-KEY-EPEL-6',
+      'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm',
+    },
+    'RedHat': salt['grains.filter_by']({
       '5': {
         'key': 'https://getfedora.org/static/A4D647E9.txt',
         'key_hash': 'sha256=664c06f579d914f2cf25d05d4d581b8ddec77cae4f72f4020c3a9264b9d5ee71',
@@ -36,16 +27,11 @@
         'key_name': 'RPM-GPG-KEY-EPEL-7',
         'rpm': 'http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-6.noarch.rpm',
       },
-    }
-    , grain='osmajorrelease')
-  %}
-{% endif %}
-
-# merge defaults
-{% do epel.update(os_map) %}
-
-# keeps legacy epel pillar , to be removed at a later time
-{% do epel.update(salt['pillar.get']('epel')) %}
-
-# merge pillar data from epel:lookup subkey
-{% do epel.update(salt['pillar.get']('epel:lookup')) %}
+    },
+    grain='osmajorrelease')
+  },
+  grain='os',
+  merge=salt['pillar.get']('epel:lookup'),
+  default='RedHat',
+  base='common' )
+-%}
