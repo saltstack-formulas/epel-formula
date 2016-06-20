@@ -19,3 +19,5 @@ Available states
 --------
 
 Installs the GPG key and EPEL RPM package for the current OS.
+
+The EPEL testing repository can be enabled by setting the Pillar ``epel:testing: true``.
