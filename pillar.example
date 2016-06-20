@@ -8,3 +8,6 @@ epel:
 
   # Disable repo so requires the --enablerepo flag to use
   disabled: false
+
+  # Disable (default)/enable EPEL testing
+  testing: false

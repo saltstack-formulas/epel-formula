@@ -80,4 +80,18 @@ enable_epel:
     - pattern: '^enabled=[0,1]'
     - repl: 'enabled=1'
 {% endif %}
+
+{% if salt['pillar.get']('epel:testing', False) %}
+enable_epel_testing:
+  file.replace:
+    - name: /etc/yum.repos.d/epel-testing.repo
+    - pattern: '^enabled=[0,1]'
+    - repl: 'enabled=1'
+{% else %}
+disable_epel_testing:
+  file.replace:
+    - name: /etc/yum.repos.d/epel-testing.repo
+    - pattern: '^enabled=[0,1]'
+    - repl: 'enabled=0'
+{% endif %}
 {% endif %}
