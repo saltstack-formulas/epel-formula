@@ -11,3 +11,6 @@ epel:
 
   # Disable (default)/enable EPEL testing
   testing: false
+
+  # Override the default EPEL release version
+  release: 7-8
