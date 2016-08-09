@@ -17,8 +17,8 @@
 {% elif grains['osmajorrelease'][0] == '7' %}
   {% set pkg = {
     'key': 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7',
-    'key_hash': 'md5=58fa8ae27c89f37b08429f04fd4a88cc',
-    'rpm': 'http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-' ~ epel_release|default('7-7', true) ~ '.noarch.rpm',
+    'key_hash': 'md5=2d5d737d69703b926a2275e4c44a65e5',
+    'rpm': 'http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-' ~ epel_release|default('7-8', true) ~ '.noarch.rpm',
   } %}
 {% elif grains['os'] == 'Amazon' and grains['osmajorrelease'] == '2014' %}
   {% set pkg = {
