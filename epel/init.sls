@@ -2,31 +2,31 @@
 {% if grains['os_family'] == 'RedHat' %}
   {% set epel_release = salt['pillar.get']('epel:release', false) %}
 # A lookup table for EPEL GPG keys & RPM URLs for various RedHat releases
-{% if grains['osmajorrelease'][0] == '5' %}
+{% if ( grains['saltversion'] >= '2017.7.0' and grains['osmajorrelease'] == 5 ) or ( grains['saltversion'] < '2017.7.0' and grains['osmajorrelease'][0] == '5' ) %}
   {% set pkg = {
     'key': 'https://fedoraproject.org/static/A4D647E9.txt',
     'key_hash': 'md5=a1d12cd9628338ddb12e9561f9ac1d6a',
     'rpm': 'http://download.fedoraproject.org/pub/epel/5/i386/epel-release-' ~ epel_release|default('5-4', true) ~ '.noarch.rpm',
   } %}
-{% elif grains['osmajorrelease'][0] == '6' %}
+{% elif ( grains['saltversion'] >= '2017.7.0' and grains['osmajorrelease'] == 6 ) or ( grains['saltversion'] < '2017.7.0' and grains['osmajorrelease'][0] == '6' ) %}
   {% set pkg = {
     'key': 'https://fedoraproject.org/static/0608B895.txt',
     'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
     'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-' ~ epel_release|default('6-8', true) ~ '.noarch.rpm',
   } %}
-{% elif grains['osmajorrelease'][0] == '7' %}
+{% elif ( grains['saltversion'] >= '2017.7.0' and grains['osmajorrelease'] == 7 ) or ( grains['saltversion'] < '2017.7.0' and grains['osmajorrelease'][0] == '7' ) %}
   {% set pkg = {
     'key': 'http://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7',
     'key_hash': 'md5=58fa8ae27c89f37b08429f04fd4a88cc',
     'rpm': 'http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-' ~ epel_release|default('7-10', true) ~ '.noarch.rpm',
   } %}
-{% elif grains['os'] == 'Amazon' and grains['osmajorrelease'] == '2014' %}
+{% elif grains['os'] == 'Amazon' and ( ( grains['saltversion'] >= '2017.7.0' and grains['osmajorrelease'] == 2014 ) or ( grains['saltversion'] < '2017.7.0' and grains['osmajorrelease'] == '2014' ) ) %}
   {% set pkg = {
     'key': 'https://fedoraproject.org/static/0608B895.txt',
     'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
     'rpm': 'http://download.fedoraproject.org/pub/epel/6/i386/epel-release-' ~ epel_release|default('6-8', true) ~ '.noarch.rpm',
   } %}
-{% elif grains['os'] == 'Amazon' and grains['osmajorrelease'] == '2015' %}
+{% elif grains['os'] == 'Amazon' and ( ( grains['saltversion'] >= '2017.7.0' and grains['osmajorrelease'] == 2015 ) or ( grains['saltversion'] < '2017.7.0' and grains['osmajorrelease'] == '2015' ) ) %}
   {% set pkg = {
     'key': 'https://fedoraproject.org/static/0608B895.txt',
     'key_hash': 'md5=eb8749ea67992fd622176442c986b788',
