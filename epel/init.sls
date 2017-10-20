@@ -67,7 +67,7 @@ set_gpg_epel:
     - require:
       - pkg: epel_release
 
-{% if salt['pillar.get']('epel:disabled', False) %}
+{% if salt['pillar.get']('epel:disabled', True) %}
 disable_epel:
   file.replace:
     - name: /etc/yum.repos.d/epel.repo
@@ -81,7 +81,7 @@ enable_epel:
     - repl: 'enabled=1'
 {% endif %}
 
-{% if salt['pillar.get']('epel:testing', False) %}
+{% if salt['pillar.get']('epel:testing', True) %}
 enable_epel_testing:
   file.replace:
     - name: /etc/yum.repos.d/epel-testing.repo
@@ -95,3 +95,4 @@ disable_epel_testing:
     - repl: 'enabled=0'
 {% endif %}
 {% endif %}
+
