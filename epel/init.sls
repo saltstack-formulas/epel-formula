@@ -6,7 +6,7 @@
   {% set pkg = {
     'key': 'https://fedoraproject.org/static/A4D647E9.txt',
     'key_hash': 'md5=a1d12cd9628338ddb12e9561f9ac1d6a',
-    'rpm': 'http://download.fedoraproject.org/pub/epel/5/i386/epel-release-' ~ epel_release|default('5-4', true) ~ '.noarch.rpm',
+    'rpm': 'http://download.fedoraproject.org/pub/archive/epel/5/i386/epel-release-' ~ epel_release|default('5-4', true) ~ '.noarch.rpm',
   } %}
 {% elif ( grains['saltversion'] >= '2017.7.0' and grains['osmajorrelease'] == 6 ) or ( grains['saltversion'] < '2017.7.0' and grains['osmajorrelease'][0] == '6' ) %}
   {% set pkg = {
