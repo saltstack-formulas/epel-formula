@@ -9,7 +9,6 @@ install_pubkey_epel:
     - source: {{ epel.key }}
     - source_hash:  {{ epel.key_hash }}
 
-
 epel_release:
   pkg.installed:
     - sources:
@@ -48,5 +47,18 @@ enable_epel:
     - pattern: '^\s*enabled=[0,1]'
     - repl: 'enabled=1'
 {% endif %}
-{% endif %}
 
+{% if epel.testing %}
+enable_epel_testing:
+  file.replace:
+    - name: /etc/yum.repos.d/epel-testing.repo
+    - pattern: '^\s*enabled=[0,1]'
+    - repl: 'enabled=1'
+{% else %}
+disable_epel_testing:
+  file.replace:
+    - name: /etc/yum.repos.d/epel-testing.repo
+    - pattern: '^\s*enabled=[0,1]'
+    - repl: 'enabled=0'
+{% endif %}
+{% endif %}
