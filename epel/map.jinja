@@ -1,6 +1,7 @@
 {% set epel= salt['grains.filter_by'] ({
     'common':{
       'disabled': False,
+      'testing': False,
     },
     'Amazon': {
       'key': 'https://fedoraproject.org/static/0608B895.txt',
