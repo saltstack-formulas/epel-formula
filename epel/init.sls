@@ -28,6 +28,9 @@ config_repo_{{ repo }}:
 {% else %}
         enabled: 0
 {% endif %}
+{% if 'exclude' in config %}
+        exclude: {{ config.exclude|join(',') }}
+{% endif %}
         gpgkey: file:///etc/pki/rpm-gpg/{{ epel.key_name }}
         gpgcheck: 1
     - require:

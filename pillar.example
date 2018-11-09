@@ -20,6 +20,9 @@ epel:
     repos:
       epel:
         enabled: true
+        exclude:
+          - pkg1
+          - pkg2
       epel-debuginfo:
         enabled: true
       epel-source:
