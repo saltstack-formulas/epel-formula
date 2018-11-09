@@ -16,6 +16,25 @@ epel_release:
     - require:
       - file: install_pubkey_epel
 
+{% if 'repos' in epel %}
+{% for repo, config in epel.repos.items() %}
+config_repo_{{ repo }}:
+  module.run:
+    - name: pkg.mod_repo
+    - repo: {{ repo }}
+    - kwargs:
+{% if config.enabled %}
+        enabled: 1
+{% else %}
+        enabled: 0
+{% endif %}
+        gpgkey: file:///etc/pki/rpm-gpg/{{ epel.key_name }}
+        gpgcheck: 1
+    - require:
+      - pkg: epel_release
+
+{% endfor %}
+{% else %}
 set_pubkey_epel:
   file.replace:
     - append_if_not_found: True
@@ -60,5 +79,6 @@ disable_epel_testing:
     - name: /etc/yum.repos.d/epel-testing.repo
     - pattern: '^\s*enabled=[0,1]'
     - repl: 'enabled=0'
+{% endif %}
 {% endif %}
 {% endif %}
