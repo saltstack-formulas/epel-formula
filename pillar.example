@@ -15,3 +15,21 @@ epel:
 
     # Disable (default)/enable EPEL testing
     testing: false
+
+    # Alternative, more detailed per-repo configuration
+    repos:
+      epel:
+        enabled: true
+        exclude:
+          - pkg1
+          - pkg2
+      epel-debuginfo:
+        enabled: true
+      epel-source:
+        enabled: true
+      epel-testing:
+        enabled: false
+      epel-testing-debuginfo
+        enabled: false
+      epel-testing-source
+        enabled: false
