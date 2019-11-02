@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
 epel:
   lookup:
     # URL to the EPEL RPM to install
@@ -29,7 +32,7 @@ epel:
         enabled: true
       epel-testing:
         enabled: false
-      epel-testing-debuginfo
+      epel-testing-debuginfo:
         enabled: false
-      epel-testing-source
+      epel-testing-source:
         enabled: false
