@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+---
+name: default
+title: epel formula
+maintainer: SaltStack Formulas
+license: Apache-2.0
+summary: Verify that the epel formula is setup and configured correctly
+supports:
+  - platform-name: centos
+  - platform-name: fedora
+  - platform-name: amazon
