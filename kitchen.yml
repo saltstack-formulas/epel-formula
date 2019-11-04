@@ -24,12 +24,14 @@ platforms:
       provision_command:
         - curl -o bootstrap-salt.sh -L https://bootstrap.saltstack.com
         - sh bootstrap-salt.sh -XdPbfrq -x python3 git master
+  # Use the `develop` image temporarily until the `master` image is available
+  # Not changing the name to minimise disruption across all of the formulas
   - name: amazonlinux-2-master-py2
     driver:
-      image: netmanagers/salt-master-py2:amazonlinux-2
+      image: netmanagers/salt-develop-py2:amazonlinux-2
       provision_command:
         - curl -o bootstrap-salt.sh -L https://bootstrap.saltstack.com
-        - sh bootstrap-salt.sh -XdPbfrq -x python2 git master
+        - sh bootstrap-salt.sh -XdPbfrq -x python2 git develop
 
   ## SALT `2019.2`
   - name: amazonlinux-1-2019-2-py2
