@@ -12,6 +12,13 @@ driver:
 # the `env.matrix` instances defined in `.travis.yml`
 platforms:
   ## SALT `master`
+  - name: amazonlinux-1-master-py2
+    driver:
+      image: amazonlinux:1
+      run_command: /sbin/init
+    provisioner:
+      salt_bootstrap_options: -XdPfq -x python2 git master
+      salt_install: bootstrap
   - name: centos-8-master-py3
     driver:
       image: netmanagers/salt-master-py3:centos-8
@@ -37,11 +44,10 @@ platforms:
   - name: amazonlinux-1-2019-2-py2
     driver:
       image: amazonlinux:1
-      platform: rhel
       run_command: /sbin/init
-      provision_command:
-        # install latest stable Salt
-        - curl -L https://bootstrap.saltstack.com | sh -s -- -X
+    provisioner:
+      salt_bootstrap_options: -XdPfq -x python2 git 2019.2
+      salt_install: bootstrap
   - name: centos-8-2019-2-py3
     driver:
       image: netmanagers/salt-2019.2-py3:centos-8
@@ -56,6 +62,13 @@ platforms:
       image: netmanagers/salt-2019.2-py2:centos-7
 
   ## SALT `2018.3`
+  - name: amazonlinux-1-2018-3-py2
+    driver:
+      image: amazonlinux:1
+      run_command: /sbin/init
+    provisioner:
+      salt_bootstrap_options: -XdPfq -x python2 git 2018.3
+      salt_install: bootstrap
   - name: fedora-30-2018-3-py3
     driver:
       image: netmanagers/salt-2018.3-py3:fedora-30
@@ -67,6 +80,13 @@ platforms:
       image: netmanagers/salt-2018.3-py2:amazonlinux-2
 
   ## SALT `2017.7`
+  - name: amazonlinux-1-2017-7-py2
+    driver:
+      image: amazonlinux:1
+      run_command: /sbin/init
+    provisioner:
+      salt_bootstrap_options: -XdPfq -x python2 git 2017.7
+      salt_install: bootstrap
   - name: centos-6-2017-7-py2
     driver:
       image: netmanagers/salt-2017.7-py2:centos-6
