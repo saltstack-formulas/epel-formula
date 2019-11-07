@@ -15,10 +15,10 @@ platforms:
   - name: amazonlinux-1-master-py2
     driver:
       image: amazonlinux:1
+      provision_command:
+        - curl -o bootstrap-salt.sh -L https://bootstrap.saltstack.com
+        - sh bootstrap-salt.sh -XdPfq -x python2 git master
       run_command: /sbin/init
-    provisioner:
-      salt_bootstrap_options: -XdPfq -x python2 git master
-      salt_install: bootstrap
   - name: centos-8-master-py3
     driver:
       image: netmanagers/salt-master-py3:centos-8
@@ -44,10 +44,10 @@ platforms:
   - name: amazonlinux-1-2019-2-py2
     driver:
       image: amazonlinux:1
+      provision_command:
+        - curl -o bootstrap-salt.sh -L https://bootstrap.saltstack.com
+        - sh bootstrap-salt.sh -XdPfq -x python2 git 2019.2
       run_command: /sbin/init
-    provisioner:
-      salt_bootstrap_options: -XdPfq -x python2 git 2019.2
-      salt_install: bootstrap
   - name: centos-8-2019-2-py3
     driver:
       image: netmanagers/salt-2019.2-py3:centos-8
@@ -65,10 +65,10 @@ platforms:
   - name: amazonlinux-1-2018-3-py2
     driver:
       image: amazonlinux:1
+      provision_command:
+        - curl -o bootstrap-salt.sh -L https://bootstrap.saltstack.com
+        - sh bootstrap-salt.sh -XdPfq -x python2 git 2018.3
       run_command: /sbin/init
-    provisioner:
-      salt_bootstrap_options: -XdPfq -x python2 git 2018.3
-      salt_install: bootstrap
   - name: fedora-30-2018-3-py3
     driver:
       image: netmanagers/salt-2018.3-py3:fedora-30
@@ -83,10 +83,10 @@ platforms:
   - name: amazonlinux-1-2017-7-py2
     driver:
       image: amazonlinux:1
+      provision_command:
+        - curl -o bootstrap-salt.sh -L https://bootstrap.saltstack.com
+        - sh bootstrap-salt.sh -XdPfq -x python2 git 2017.7
       run_command: /sbin/init
-    provisioner:
-      salt_bootstrap_options: -XdPfq -x python2 git 2017.7
-      salt_install: bootstrap
   - name: centos-6-2017-7-py2
     driver:
       image: netmanagers/salt-2017.7-py2:centos-6
