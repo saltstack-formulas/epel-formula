@@ -15,7 +15,7 @@ control 'epel package' do
       end
     when 'centos'
       if platform[:release].start_with?('8')
-        '8-7.el8'
+        '8-8.el8'
       elsif platform[:release].start_with?('7')
         '7-12'
       elsif platform[:release].start_with?('6')
