@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.15.1](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.0...v1.15.1) (2020-02-13)
+
+
+### Bug Fixes
+
+* **map.jinja:** update link to `rpm` for `EPEL-8` ([3e90e0d](https://github.com/saltstack-formulas/epel-formula/commit/3e90e0de36217ab6d15bc03dc907524ab49d7727))
+
+
+### Continuous Integration
+
+* **gemfile:** restrict `train` gem version until upstream fix [skip ci] ([bddcd80](https://github.com/saltstack-formulas/epel-formula/commit/bddcd80a2b2c59846f26cc11cd855199837ec8bd))
+* **kitchen:** avoid using bootstrap for `master` instances [skip ci] ([30ade3d](https://github.com/saltstack-formulas/epel-formula/commit/30ade3d539d2b92c1ac0521952824c0221c9602d))
+* **kitchen:** use `develop` image until `master` is ready (`amazonlinux`) [skip ci] ([5db2344](https://github.com/saltstack-formulas/epel-formula/commit/5db23441832b058f2b4c6b4f2ddc757ab4647f50))
+* **kitchen:** use `provision_command` for `amazonlinux-1` images ([2cfcfde](https://github.com/saltstack-formulas/epel-formula/commit/2cfcfde545303a455a662854b506d2cb36588a9d)), closes [/github.com/saltstack-formulas/vault-formula/pull/50#pullrequestreview-312037893](https://github.com//github.com/saltstack-formulas/vault-formula/pull/50/issues/pullrequestreview-312037893)
+* **kitchen:** use `stable` for `amazonlinux-1` bootstrap [skip ci] ([472434b](https://github.com/saltstack-formulas/epel-formula/commit/472434b14e6861f6a17f297b8c7fd501dd4cae4a))
+* **kitchen+travis:** use bootstrapped `amazonlinux-1` images [skip ci] ([37d2fc6](https://github.com/saltstack-formulas/epel-formula/commit/37d2fc6ff4089ab173766aeac87964987e38c11e))
+* **travis:** apply changes from build config validation [skip ci] ([904b4fc](https://github.com/saltstack-formulas/epel-formula/commit/904b4fc236b4a93b8d5a6feeb682a99b958f30cb))
+* **travis:** opt-in to `dpl v2` to complete build config validation [skip ci] ([5fa5251](https://github.com/saltstack-formulas/epel-formula/commit/5fa5251c74eb9dccd1fcd0e1ca5038e34f075a4d))
+* **travis:** quote pathspecs used with `git ls-files` [skip ci] ([6d28624](https://github.com/saltstack-formulas/epel-formula/commit/6d286241e01658611dd247dce656157f49afddeb))
+* **travis:** run `shellcheck` during lint job [skip ci] ([8491178](https://github.com/saltstack-formulas/epel-formula/commit/8491178dcd9bab4f5419fcc5ade0a9f38f1a4281))
+* **travis:** use `major.minor` for `semantic-release` version [skip ci] ([f7f2342](https://github.com/saltstack-formulas/epel-formula/commit/f7f2342a397e699b65053a35dba0b3c75ccfbce7))
+* **travis:** use build config validation (beta) [skip ci] ([ecab107](https://github.com/saltstack-formulas/epel-formula/commit/ecab107ae92470a8e6d53b1dc18d76d1c4f3b345))
+
 # [1.15.0](https://github.com/saltstack-formulas/epel-formula/compare/v1.14.1...v1.15.0) (2019-11-03)
 
 
