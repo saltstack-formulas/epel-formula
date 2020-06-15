@@ -14,24 +14,24 @@ platforms:
   ## SALT `master`
   - name: centos-8-master-py3
     driver:
-      image: netmanagers/salt-master-py3:centos-8
+      image: saltimages/salt-master-py3:centos-8
   - name: fedora-31-master-py3
     driver:
-      image: netmanagers/salt-master-py3:fedora-31
+      image: saltimages/salt-master-py3:fedora-31
   - name: amazonlinux-2-master-py3
     driver:
-      image: netmanagers/salt-master-py3:amazonlinux-2
+      image: saltimages/salt-master-py3:amazonlinux-2
 
   ## SALT `2019.2`
   - name: centos-8-2019-2-py3
     driver:
-      image: netmanagers/salt-2019.2-py3:centos-8
+      image: saltimages/salt-2019.2-py3:centos-8
   - name: fedora-31-2019-2-py3
     driver:
-      image: netmanagers/salt-2019.2-py3:fedora-31
+      image: saltimages/salt-2019.2-py3:fedora-31
   - name: amazonlinux-2-2019-2-py3
     driver:
-      image: netmanagers/salt-2019.2-py3:amazonlinux-2
+      image: saltimages/salt-2019.2-py3:amazonlinux-2
   - name: centos-7-2019-2-py2
     driver:
       image: netmanagers/salt-2019.2-py2:centos-7
