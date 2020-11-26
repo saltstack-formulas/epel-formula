@@ -17,7 +17,7 @@ control 'epel package' do
       if platform[:release].start_with?('8')
         '8-8.el8'
       elsif platform[:release].start_with?('7')
-        '7-12'
+        '7-13'
       elsif platform[:release].start_with?('6')
         '6-8'
       end
