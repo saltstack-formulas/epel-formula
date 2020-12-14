@@ -9,22 +9,16 @@ control 'epel package' do
     when 'amazon'
       case platform[:release]
       when '2'
-        '7-12'
+        '7'
       when '2018.03'
-        '6-8'
+        '6'
       end
     when 'centos'
-      if platform[:release].start_with?('8')
-        '8-8.el8'
-      elsif platform[:release].start_with?('7')
-        '7-13'
-      elsif platform[:release].start_with?('6')
-        '6-8'
-      end
+      platform[:release][0]
     end
 
   describe package(pkg) do
     it { should be_installed }
-    its('version') { should eq version }
+    its('version') { should match(/^#{version}/) }
   end
 end
