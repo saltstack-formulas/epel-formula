@@ -1,5 +1,30 @@
 # Changelog
 
+## [1.15.2](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.1...v1.15.2) (2020-12-16)
+
+
+### Bug Fixes
+
+* **map.jinja:** update link to `rpm` for `EPEL-7` ([b778c62](https://github.com/saltstack-formulas/epel-formula/commit/b778c629170be41abcc110779b34c2ddd319b920))
+* **map.jinja:** update link to `rpm` for `EPEL-8` ([1ad5806](https://github.com/saltstack-formulas/epel-formula/commit/1ad5806ecd2764ac0b8212afd7a0af78b3c799a4))
+
+
+### Continuous Integration
+
+* **gemfile.lock:** add to repo with updated `Gemfile` [skip ci] ([cc00467](https://github.com/saltstack-formulas/epel-formula/commit/cc0046735698e6763be5298fcf4ee3713d6f7281))
+* **gitlab-ci:** use GitLab CI as Travis CI replacement ([3cf58d8](https://github.com/saltstack-formulas/epel-formula/commit/3cf58d8b277deec223fe0c3665221e53accc53c0))
+* **kitchen:** use `saltimages` Docker Hub where available [skip ci] ([ace478e](https://github.com/saltstack-formulas/epel-formula/commit/ace478e4b8413a423390ee38af5fe815b1fdef9b))
+* **pre-commit:** add to formula [skip ci] ([f57867a](https://github.com/saltstack-formulas/epel-formula/commit/f57867a99ba6949517abd1916c32ea7b37512adb))
+* **pre-commit:** enable/disable `rstcheck` as relevant [skip ci] ([a160c4a](https://github.com/saltstack-formulas/epel-formula/commit/a160c4a16c868b591f22ea267dfef3ce42e0b8c9))
+* **pre-commit:** finalise `rstcheck` configuration [skip ci] ([8039f7c](https://github.com/saltstack-formulas/epel-formula/commit/8039f7cbbbef5e428a4c15a58f3ed8ce176e35a1))
+* **travis:** add notifications => zulip [skip ci] ([d90fb30](https://github.com/saltstack-formulas/epel-formula/commit/d90fb30a0af6bcd447527a55ce7ded21323f05af))
+* **workflows/commitlint:** add to repo [skip ci] ([8be296e](https://github.com/saltstack-formulas/epel-formula/commit/8be296eff1df2247ae6d7f4bd6d04e697d416cbe))
+
+
+### Tests
+
+* **packages_spec:** refactor to check first part of version number only ([a4f2f2c](https://github.com/saltstack-formulas/epel-formula/commit/a4f2f2c532ba316d6cce2516760c710c5cb045ec))
+
 ## [1.15.1](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.0...v1.15.1) (2020-02-13)
 
 
