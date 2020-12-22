@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.15.3](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.2...v1.15.3) (2020-12-22)
+
+
+### Bug Fixes
+
+* **map.jinja:** update to `epel-release-8-10.el8.noarch.rpm` ([82f8d68](https://github.com/saltstack-formulas/epel-formula/commit/82f8d683199cd6e79fe30ccbd73ec77f3cca4ef8))
+* osmajorrelease is int instead of str since 2017.7.1 ([5fdd1fc](https://github.com/saltstack-formulas/epel-formula/commit/5fdd1fc054af4f156fae7c20ba191e051938eef8)), closes [/github.com/saltstack/salt/blob/v2017.7.1/salt/grains/core.py#L1675](https://github.com//github.com/saltstack/salt/blob/v2017.7.1/salt/grains/core.py/issues/L1675)
+
+
+### Continuous Integration
+
+* **commitlint:** ensure `upstream/master` uses main repo URL [skip ci] ([ae613cd](https://github.com/saltstack-formulas/epel-formula/commit/ae613cddddc248b1de97d5e9d0125d22435432d4))
+* **gitlab-ci:** add `rubocop` linter (with `allow_failure`) [skip ci] ([858f8f0](https://github.com/saltstack-formulas/epel-formula/commit/858f8f08c5a63459bac7c329b6cf1e86ac2aa428))
+
 ## [1.15.2](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.1...v1.15.2) (2020-12-16)
 
 
