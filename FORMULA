@@ -1,7 +1,7 @@
 name: epel
 os: RedHat, Fedora, CentOS, Amazon
 os_family: RedHat
-version: 1.15.4
+version: 1.15.5
 release: 1
 minimum_version: 2017.7
 summary: epel formula

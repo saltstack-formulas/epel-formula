@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.5](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.4...v1.15.5) (2020-12-25)
+
+
+### Bug Fixes
+
+* **map.jinja:** update EL6 URLs ([7a87d42](https://github.com/saltstack-formulas/epel-formula/commit/7a87d427ea2b1f746f9028d0fa670138780559e0))
+
 ## [1.15.4](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.3...v1.15.4) (2020-12-25)
 
 
