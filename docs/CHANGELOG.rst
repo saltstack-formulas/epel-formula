@@ -2,6 +2,15 @@
 Changelog
 =========
 
+`1.15.4 <https://github.com/saltstack-formulas/epel-formula/compare/v1.15.3...v1.15.4>`_ (2020-12-25)
+---------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **map.jinja:** update GPG url (\ `a5e6161 <https://github.com/saltstack-formulas/epel-formula/commit/a5e61611c03832b2dc0a25af7f31d5d4c55f2896>`_\ )
+
 `1.15.3 <https://github.com/saltstack-formulas/epel-formula/compare/v1.15.2...v1.15.3>`_ (2020-12-22)
 ---------------------------------------------------------------------------------------------------------
 
