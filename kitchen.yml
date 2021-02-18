@@ -8,58 +8,92 @@ driver:
   privileged: true
   run_command: /lib/systemd/systemd
 
-# Make sure the platforms listed below match up with
-# the `env.matrix` instances defined in `.travis.yml`
 platforms:
+
+  ## SALT `tiamat`
+  - name: centos-8-tiamat-py3
+    driver:
+      image: saltimages/salt-tiamat-py3:centos-8
+  - name: centos-7-tiamat-py3
+    driver:
+      image: saltimages/salt-tiamat-py3:centos-7
+  - name: amazonlinux-2-tiamat-py3
+    driver:
+      image: saltimages/salt-tiamat-py3:amazonlinux-2
+  - name: oraclelinux-8-tiamat-py3
+    driver:
+      image: saltimages/salt-tiamat-py3:oraclelinux-8
+  - name: oraclelinux-7-tiamat-py3
+    driver:
+      image: saltimages/salt-tiamat-py3:oraclelinux-7
+
   ## SALT `master`
   - name: centos-8-master-py3
     driver:
       image: saltimages/salt-master-py3:centos-8
-  - name: fedora-31-master-py3
+  - name: centos-7-master-py3
     driver:
-      image: saltimages/salt-master-py3:fedora-31
+      image: saltimages/salt-master-py3:centos-7
   - name: amazonlinux-2-master-py3
     driver:
       image: saltimages/salt-master-py3:amazonlinux-2
+  - name: oraclelinux-8-master-py3
+    driver:
+      image: saltimages/salt-master-py3:oraclelinux-8
+  - name: oraclelinux-7-master-py3
+    driver:
+      image: saltimages/salt-master-py3:oraclelinux-7
 
-  ## SALT `2019.2`
-  - name: centos-8-2019-2-py3
+  ## SALT `3002.2`
+  - name: centos-8-3002-2-py3
     driver:
-      image: saltimages/salt-2019.2-py3:centos-8
-  - name: fedora-31-2019-2-py3
+      image: saltimages/salt-3002.2-py3:centos-8
+  - name: centos-7-3002-2-py3
     driver:
-      image: saltimages/salt-2019.2-py3:fedora-31
-  - name: amazonlinux-2-2019-2-py3
+      image: saltimages/salt-3002.2-py3:centos-7
+  - name: amazonlinux-2-3002-2-py3
     driver:
-      image: saltimages/salt-2019.2-py3:amazonlinux-2
-  - name: centos-7-2019-2-py2
+      image: saltimages/salt-3002.2-py3:amazonlinux-2
+  - name: oraclelinux-8-3002-2-py3
     driver:
-      image: netmanagers/salt-2019.2-py2:centos-7
+      image: saltimages/salt-3002.2-py3:oraclelinux-8
+  - name: oraclelinux-7-3002-2-py3
+    driver:
+      image: saltimages/salt-3002.2-py3:oraclelinux-7
 
-  ## SALT `2018.3`
-  - name: fedora-30-2018-3-py3
+  ## SALT `3001.4`
+  - name: centos-8-3001-4-py3
     driver:
-      image: netmanagers/salt-2018.3-py3:fedora-30
-  - name: centos-7-2018-3-py2
+      image: saltimages/salt-3001.4-py3:centos-8
+  - name: centos-7-3001-4-py3
     driver:
-      image: netmanagers/salt-2018.3-py2:centos-7
-  - name: amazonlinux-1-2018-3-py2
+      image: saltimages/salt-3001.4-py3:centos-7
+  - name: amazonlinux-2-3001-4-py3
     driver:
-      image: netmanagers/salt-2018.3-py2:amazonlinux-1
-      run_command: /sbin/init
+      image: saltimages/salt-3001.4-py3:amazonlinux-2
+  - name: oraclelinux-8-3001-4-py3
+    driver:
+      image: saltimages/salt-3001.4-py3:oraclelinux-8
+  - name: oraclelinux-7-3001-4-py3
+    driver:
+      image: saltimages/salt-3001.4-py3:oraclelinux-7
 
-  ## SALT `2017.7`
-  - name: centos-6-2017-7-py2
+  ## SALT `3000.6`
+  - name: centos-8-3000-6-py3
     driver:
-      image: netmanagers/salt-2017.7-py2:centos-6
-      run_command: /sbin/init
-  - name: fedora-30-2017-7-py2
+      image: saltimages/salt-3000.6-py3:centos-8
+  - name: centos-7-3000-6-py3
     driver:
-      image: netmanagers/salt-2017.7-py2:fedora-30
-  - name: amazonlinux-1-2017-7-py2
+      image: saltimages/salt-3000.6-py3:centos-7
+  - name: amazonlinux-2-3000-6-py3
     driver:
-      image: netmanagers/salt-2017.7-py2:amazonlinux-1
-      run_command: /sbin/init
+      image: saltimages/salt-3000.6-py3:amazonlinux-2
+  - name: oraclelinux-8-3000-6-py3
+    driver:
+      image: saltimages/salt-3000.6-py3:oraclelinux-8
+  - name: oraclelinux-7-3000-6-py3
+    driver:
+      image: saltimages/salt-3000.6-py3:oraclelinux-7
 
 provisioner:
   name: salt_solo
