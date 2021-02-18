@@ -13,7 +13,7 @@ control 'epel package' do
       when '2018.03'
         '6'
       end
-    when 'centos'
+    else
       platform[:release][0]
     end
 
