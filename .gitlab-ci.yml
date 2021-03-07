@@ -46,7 +46,7 @@ variables:
   DOCKER_DRIVER: 'overlay2'
 
 ###############################################################################
-# `lint` stage: `commitlint` & `pre-commit`
+# `lint` stage: `commitlint`, `pre-commit` & `rubocop` (latest, failure allowed)
 ###############################################################################
 commitlint:
   stage: *stage_lint
@@ -133,21 +133,21 @@ default-centos-7-master-py3: {extends: '.test_instance'}
 default-amazonlinux-2-master-py3: {extends: '.test_instance'}
 default-oraclelinux-8-master-py3: {extends: '.test_instance'}
 default-oraclelinux-7-master-py3: {extends: '.test_instance'}
-# default-centos-8-3002-2-py3: {extends: '.test_instance'}
-# default-centos-7-3002-2-py3: {extends: '.test_instance'}
-# default-amazonlinux-2-3002-2-py3: {extends: '.test_instance'}
-# default-oraclelinux-8-3002-2-py3: {extends: '.test_instance'}
-# default-oraclelinux-7-3002-2-py3: {extends: '.test_instance'}
-# default-centos-8-3001-4-py3: {extends: '.test_instance'}
-# default-centos-7-3001-4-py3: {extends: '.test_instance'}
-# default-amazonlinux-2-3001-4-py3: {extends: '.test_instance'}
-# default-oraclelinux-8-3001-4-py3: {extends: '.test_instance'}
-# default-oraclelinux-7-3001-4-py3: {extends: '.test_instance'}
-# default-centos-8-3000-6-py3: {extends: '.test_instance'}
-# default-centos-7-3000-6-py3: {extends: '.test_instance'}
-# default-amazonlinux-2-3000-6-py3: {extends: '.test_instance'}
-# default-oraclelinux-8-3000-6-py3: {extends: '.test_instance'}
-# default-oraclelinux-7-3000-6-py3: {extends: '.test_instance'}
+# default-centos-8-3002-5-py3: {extends: '.test_instance'}
+# default-centos-7-3002-5-py3: {extends: '.test_instance'}
+# default-amazonlinux-2-3002-5-py3: {extends: '.test_instance'}
+# default-oraclelinux-8-3002-5-py3: {extends: '.test_instance'}
+# default-oraclelinux-7-3002-5-py3: {extends: '.test_instance'}
+# default-centos-8-3001-6-py3: {extends: '.test_instance'}
+# default-centos-7-3001-6-py3: {extends: '.test_instance'}
+# default-amazonlinux-2-3001-6-py3: {extends: '.test_instance'}
+# default-oraclelinux-8-3001-6-py3: {extends: '.test_instance'}
+# default-oraclelinux-7-3001-6-py3: {extends: '.test_instance'}
+# default-centos-8-3000-8-py3: {extends: '.test_instance'}
+# default-centos-7-3000-8-py3: {extends: '.test_instance'}
+# default-amazonlinux-2-3000-8-py3: {extends: '.test_instance'}
+# default-oraclelinux-8-3000-8-py3: {extends: '.test_instance'}
+# default-oraclelinux-7-3000-8-py3: {extends: '.test_instance'}
 
 ###############################################################################
 # `release` stage: `semantic-release`

@@ -44,56 +44,56 @@ platforms:
     driver:
       image: saltimages/salt-master-py3:oraclelinux-7
 
-  ## SALT `3002.2`
-  - name: centos-8-3002-2-py3
+  ## SALT `3002.5`
+  - name: centos-8-3002-5-py3
     driver:
-      image: saltimages/salt-3002.2-py3:centos-8
-  - name: centos-7-3002-2-py3
+      image: saltimages/salt-3002.5-py3:centos-8
+  - name: centos-7-3002-5-py3
     driver:
-      image: saltimages/salt-3002.2-py3:centos-7
-  - name: amazonlinux-2-3002-2-py3
+      image: saltimages/salt-3002.5-py3:centos-7
+  - name: amazonlinux-2-3002-5-py3
     driver:
-      image: saltimages/salt-3002.2-py3:amazonlinux-2
-  - name: oraclelinux-8-3002-2-py3
+      image: saltimages/salt-3002.5-py3:amazonlinux-2
+  - name: oraclelinux-8-3002-5-py3
     driver:
-      image: saltimages/salt-3002.2-py3:oraclelinux-8
-  - name: oraclelinux-7-3002-2-py3
+      image: saltimages/salt-3002.5-py3:oraclelinux-8
+  - name: oraclelinux-7-3002-5-py3
     driver:
-      image: saltimages/salt-3002.2-py3:oraclelinux-7
+      image: saltimages/salt-3002.5-py3:oraclelinux-7
 
-  ## SALT `3001.4`
-  - name: centos-8-3001-4-py3
+  ## SALT `3001.6`
+  - name: centos-8-3001-6-py3
     driver:
-      image: saltimages/salt-3001.4-py3:centos-8
-  - name: centos-7-3001-4-py3
+      image: saltimages/salt-3001.6-py3:centos-8
+  - name: centos-7-3001-6-py3
     driver:
-      image: saltimages/salt-3001.4-py3:centos-7
-  - name: amazonlinux-2-3001-4-py3
+      image: saltimages/salt-3001.6-py3:centos-7
+  - name: amazonlinux-2-3001-6-py3
     driver:
-      image: saltimages/salt-3001.4-py3:amazonlinux-2
-  - name: oraclelinux-8-3001-4-py3
+      image: saltimages/salt-3001.6-py3:amazonlinux-2
+  - name: oraclelinux-8-3001-6-py3
     driver:
-      image: saltimages/salt-3001.4-py3:oraclelinux-8
-  - name: oraclelinux-7-3001-4-py3
+      image: saltimages/salt-3001.6-py3:oraclelinux-8
+  - name: oraclelinux-7-3001-6-py3
     driver:
-      image: saltimages/salt-3001.4-py3:oraclelinux-7
+      image: saltimages/salt-3001.6-py3:oraclelinux-7
 
-  ## SALT `3000.6`
-  - name: centos-8-3000-6-py3
+  ## SALT `3000.8`
+  - name: centos-8-3000-8-py3
     driver:
-      image: saltimages/salt-3000.6-py3:centos-8
-  - name: centos-7-3000-6-py3
+      image: saltimages/salt-3000.8-py3:centos-8
+  - name: centos-7-3000-8-py3
     driver:
-      image: saltimages/salt-3000.6-py3:centos-7
-  - name: amazonlinux-2-3000-6-py3
+      image: saltimages/salt-3000.8-py3:centos-7
+  - name: amazonlinux-2-3000-8-py3
     driver:
-      image: saltimages/salt-3000.6-py3:amazonlinux-2
-  - name: oraclelinux-8-3000-6-py3
+      image: saltimages/salt-3000.8-py3:amazonlinux-2
+  - name: oraclelinux-8-3000-8-py3
     driver:
-      image: saltimages/salt-3000.6-py3:oraclelinux-8
-  - name: oraclelinux-7-3000-6-py3
+      image: saltimages/salt-3000.8-py3:oraclelinux-8
+  - name: oraclelinux-7-3000-8-py3
     driver:
-      image: saltimages/salt-3000.6-py3:oraclelinux-7
+      image: saltimages/salt-3000.8-py3:oraclelinux-7
 
 provisioner:
   name: salt_solo
