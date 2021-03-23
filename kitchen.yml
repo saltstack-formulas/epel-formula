@@ -119,6 +119,7 @@ suites:
       state_top:
         base:
           '*':
+            - epel._mapdata
             - epel
       pillars:
         top.sls:
