@@ -2,6 +2,33 @@
 Changelog
 =========
 
+`1.15.6 <https://github.com/saltstack-formulas/epel-formula/compare/v1.15.5...v1.15.6>`_ (2021-06-29)
+---------------------------------------------------------------------------------------------------------
+
+Bug Fixes
+^^^^^^^^^
+
+
+* **map.jinja:** update to ``epel-release-8-11.el8.noarch.rpm`` (\ `adbf3db <https://github.com/saltstack-formulas/epel-formula/commit/adbf3dbff9d1e589f741f854d1e55a3a7ad14502>`_\ )
+
+Continuous Integration
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+* add ``arch-master`` to matrix and update ``.travis.yml`` [skip ci] (\ `c5dd19c <https://github.com/saltstack-formulas/epel-formula/commit/c5dd19c89b801533ff4cb7307086e955ce5bbc79>`_\ )
+* **gemfile+lock:** use ``ssf`` customised ``kitchen-docker`` repo [skip ci] (\ `e3b8642 <https://github.com/saltstack-formulas/epel-formula/commit/e3b864223269c57b7d2230c9a0bc8b974339d018>`_\ )
+* **kitchen+ci:** use latest pre-salted images (after CVE) [skip ci] (\ `ec2f417 <https://github.com/saltstack-formulas/epel-formula/commit/ec2f417e0e3b125fe699005b132fb8df5e9f3364>`_\ )
+* **kitchen+gitlab:** adjust matrix to add ``3003`` [skip ci] (\ `3a2c66c <https://github.com/saltstack-formulas/epel-formula/commit/3a2c66ccd3a23b04cc7e532f0a5b908607f7b2a9>`_\ )
+* **kitchen+gitlab-ci:** use latest pre-salted images [skip ci] (\ `01c6056 <https://github.com/saltstack-formulas/epel-formula/commit/01c6056777bf47b6f67a826af21b2d26108dd9c7>`_\ )
+* **pre-commit:** update hook for ``rubocop`` [skip ci] (\ `76109bc <https://github.com/saltstack-formulas/epel-formula/commit/76109bcd9204c6f1bdd77a299fc225990ad0de5b>`_\ )
+
+Tests
+^^^^^
+
+
+* standardise use of ``share`` suite & ``_mapdata`` state [skip ci] (\ `bd9b1ba <https://github.com/saltstack-formulas/epel-formula/commit/bd9b1ba59b1d756e5b3098f9ef9692ec7cca1c52>`_\ )
+* **oraclelinux:** update to work for Oracle Linux as well (\ `c218712 <https://github.com/saltstack-formulas/epel-formula/commit/c21871249ee7facc38865ffe31aed548c4cfec0a>`_\ )
+
 `1.15.5 <https://github.com/saltstack-formulas/epel-formula/compare/v1.15.4...v1.15.5>`_ (2020-12-25)
 ---------------------------------------------------------------------------------------------------------
 
