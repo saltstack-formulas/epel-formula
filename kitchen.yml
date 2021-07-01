@@ -26,6 +26,12 @@ platforms:
   - name: oraclelinux-7-tiamat-py3
     driver:
       image: saltimages/salt-tiamat-py3:oraclelinux-7
+  - name: almalinux-8-tiamat-py3
+    driver:
+      image: saltimages/salt-tiamat-py3:almalinux-8
+  - name: rockylinux-8-tiamat-py3
+    driver:
+      image: saltimages/salt-tiamat-py3:rockylinux-8
 
   ## SALT `master`
   - name: centos-8-master-py3
@@ -43,23 +49,29 @@ platforms:
   - name: oraclelinux-7-master-py3
     driver:
       image: saltimages/salt-master-py3:oraclelinux-7
+  - name: almalinux-8-master-py3
+    driver:
+      image: saltimages/salt-master-py3:almalinux-8
+  - name: rockylinux-8-master-py3
+    driver:
+      image: saltimages/salt-master-py3:rockylinux-8
 
-  ## SALT `3003.0`
-  - name: centos-8-3003-0-py3
+  ## SALT `3003.1`
+  - name: centos-8-3003-1-py3
     driver:
-      image: saltimages/salt-3003.0-py3:centos-8
-  - name: centos-7-3003-0-py3
+      image: saltimages/salt-3003.1-py3:centos-8
+  - name: centos-7-3003-1-py3
     driver:
-      image: saltimages/salt-3003.0-py3:centos-7
-  - name: amazonlinux-2-3003-0-py3
+      image: saltimages/salt-3003.1-py3:centos-7
+  - name: amazonlinux-2-3003-1-py3
     driver:
-      image: saltimages/salt-3003.0-py3:amazonlinux-2
-  - name: oraclelinux-8-3003-0-py3
+      image: saltimages/salt-3003.1-py3:amazonlinux-2
+  - name: oraclelinux-8-3003-1-py3
     driver:
-      image: saltimages/salt-3003.0-py3:oraclelinux-8
-  - name: oraclelinux-7-3003-0-py3
+      image: saltimages/salt-3003.1-py3:oraclelinux-8
+  - name: oraclelinux-7-3003-1-py3
     driver:
-      image: saltimages/salt-3003.0-py3:oraclelinux-7
+      image: saltimages/salt-3003.1-py3:oraclelinux-7
 
   ## SALT `3002.6`
   - name: centos-8-3002-6-py3

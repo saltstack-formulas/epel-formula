@@ -13,3 +13,5 @@ supports:
   - platform-name: centos
   - platform-name: amazon
   - platform-name: oracle
+  - platform-name: almalinux
+  - platform-name: rocky

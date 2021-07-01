@@ -128,16 +128,20 @@ rubocop:
 # default-amazonlinux-2-tiamat-py3: {extends: '.test_instance'}
 # default-oraclelinux-8-tiamat-py3: {extends: '.test_instance'}
 # default-oraclelinux-7-tiamat-py3: {extends: '.test_instance'}
+# default-almalinux-8-tiamat-py3: {extends: '.test_instance'}
+# default-rockylinux-8-tiamat-py3: {extends: '.test_instance'}
 default-centos-8-master-py3: {extends: '.test_instance'}
 default-centos-7-master-py3: {extends: '.test_instance'}
 default-amazonlinux-2-master-py3: {extends: '.test_instance'}
 default-oraclelinux-8-master-py3: {extends: '.test_instance'}
 default-oraclelinux-7-master-py3: {extends: '.test_instance'}
-# default-centos-8-3003-0-py3: {extends: '.test_instance'}
-# default-centos-7-3003-0-py3: {extends: '.test_instance'}
-# default-amazonlinux-2-3003-0-py3: {extends: '.test_instance'}
-# default-oraclelinux-8-3003-0-py3: {extends: '.test_instance'}
-# default-oraclelinux-7-3003-0-py3: {extends: '.test_instance'}
+default-almalinux-8-master-py3: {extends: '.test_instance'}
+default-rockylinux-8-master-py3: {extends: '.test_instance'}
+# default-centos-8-3003-1-py3: {extends: '.test_instance'}
+# default-centos-7-3003-1-py3: {extends: '.test_instance'}
+# default-amazonlinux-2-3003-1-py3: {extends: '.test_instance'}
+# default-oraclelinux-8-3003-1-py3: {extends: '.test_instance'}
+# default-oraclelinux-7-3003-1-py3: {extends: '.test_instance'}
 # default-centos-8-3002-6-py3: {extends: '.test_instance'}
 # default-centos-7-3002-6-py3: {extends: '.test_instance'}
 # default-amazonlinux-2-3002-6-py3: {extends: '.test_instance'}
