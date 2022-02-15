@@ -1,5 +1,33 @@
 # Changelog
 
+## [1.15.7](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.6...v1.15.7) (2022-02-15)
+
+
+### Bug Fixes
+
+* **map.jinja:** remove EOL platforms [skip ci] ([afacf6b](https://github.com/saltstack-formulas/epel-formula/commit/afacf6b97a95be979fc16bd61ad6922350db6136))
+* **map.jinja:** update URL for EL8 ([8d5f3a6](https://github.com/saltstack-formulas/epel-formula/commit/8d5f3a6592cc4934c22a7f71b19cf033c5fdfa18))
+* **map.jinja:** update URLs for EL7 & EL8 ([4698e8e](https://github.com/saltstack-formulas/epel-formula/commit/4698e8e539184e7f6dba642d3ea2ab41ad157319))
+
+
+### Continuous Integration
+
+* update linters to latest versions [skip ci] ([ceb3231](https://github.com/saltstack-formulas/epel-formula/commit/ceb323131f330a8314a4a196b520cccffbea9e5c))
+* **3003.1:** update inc. AlmaLinux, Rocky & `rst-lint` [skip ci] ([324472c](https://github.com/saltstack-formulas/epel-formula/commit/324472cde485b0678ba7cc18526fcd5de7dd66ec))
+* **gemfile:** allow rubygems proxy to be provided as an env var [skip ci] ([5fdfacb](https://github.com/saltstack-formulas/epel-formula/commit/5fdfacba3435ace0b085db2267b8e54a9e442f77))
+* **gemfile+lock:** use `ssf` customised `inspec` repo [skip ci] ([35490e6](https://github.com/saltstack-formulas/epel-formula/commit/35490e69d3ad7c00b8d0e81aafadc5d2732b0901))
+* **kitchen:** move `provisioner` block & update `run_command` [skip ci] ([3cb4ea0](https://github.com/saltstack-formulas/epel-formula/commit/3cb4ea0778b5323e6ecf83a059bca5733ea88d8a))
+* **kitchen+ci:** update with `3004` pre-salted images/boxes [skip ci] ([9007b4c](https://github.com/saltstack-formulas/epel-formula/commit/9007b4cf99bbcfa2b23538a61dd1f9a4a9d4e23c))
+* **kitchen+ci:** update with latest `3003.2` pre-salted images [skip ci] ([48a42aa](https://github.com/saltstack-formulas/epel-formula/commit/48a42aa69feba3e6145bcbf918ce601c8b56015f))
+* **kitchen+ci:** update with latest CVE pre-salted images [skip ci] ([ef4870e](https://github.com/saltstack-formulas/epel-formula/commit/ef4870ea9ba9c619390ac4ffc293fd4c27661501))
+* **kitchen+gitlab:** update for new pre-salted images [skip ci] ([eaf5358](https://github.com/saltstack-formulas/epel-formula/commit/eaf5358b79b9944d78bef240d0d66e1bf8b06991))
+* add Debian 11 Bullseye & update `yamllint` configuration [skip ci] ([65a43a7](https://github.com/saltstack-formulas/epel-formula/commit/65a43a7923e0f9b6300355c2e841082b744e62b9))
+
+
+### Tests
+
+* **system:** add `build_platform_codename` [skip ci] ([658515a](https://github.com/saltstack-formulas/epel-formula/commit/658515a486d1ed47e00b4ef72612e2e5cee12967))
+
 ## [1.15.6](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.5...v1.15.6) (2021-06-29)
 
 
