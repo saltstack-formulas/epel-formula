@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.15.8](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.7...v1.15.8) (2022-03-29)
+
+
+### Bug Fixes
+
+* **map.jinja:** update URL for EL8 ([2843e24](https://github.com/saltstack-formulas/epel-formula/commit/2843e24141c15a216bcd8f4c982fbd2fe54ea846))
+
+
+### Documentation
+
+* **readme:** update platform support description [skip ci] ([fa1e368](https://github.com/saltstack-formulas/epel-formula/commit/fa1e368562846acdeb0d9f01500c27ec9d958b0e)), closes [/github.com/saltstack-formulas/epel-formula/commit/afacf6b97a95#commitcomment-68240889](https://github.com//github.com/saltstack-formulas/epel-formula/commit/afacf6b97a95/issues/commitcomment-68240889)
+
 ## [1.15.7](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.6...v1.15.7) (2022-02-15)
 
 
