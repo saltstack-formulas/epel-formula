@@ -66,62 +66,62 @@ platforms:
     driver:
       image: saltimages/salt-master-py3:rockylinux-8
 
-  ## SALT `3004.0`
-  - name: centos-stream8-3004-0-py3
+  ## SALT `3004.1`
+  - name: centos-stream8-3004-1-py3
     driver:
-      image: saltimages/salt-3004.0-py3:centos-stream8
-  - name: centos-7-3004-0-py3
+      image: saltimages/salt-3004.1-py3:centos-stream8
+  - name: centos-7-3004-1-py3
     driver:
-      image: saltimages/salt-3004.0-py3:centos-7
-  - name: amazonlinux-2-3004-0-py3
+      image: saltimages/salt-3004.1-py3:centos-7
+  - name: amazonlinux-2-3004-1-py3
     driver:
-      image: saltimages/salt-3004.0-py3:amazonlinux-2
-  - name: oraclelinux-8-3004-0-py3
+      image: saltimages/salt-3004.1-py3:amazonlinux-2
+  - name: oraclelinux-8-3004-1-py3
     driver:
-      image: saltimages/salt-3004.0-py3:oraclelinux-8
-  - name: oraclelinux-7-3004-0-py3
+      image: saltimages/salt-3004.1-py3:oraclelinux-8
+  - name: oraclelinux-7-3004-1-py3
     driver:
-      image: saltimages/salt-3004.0-py3:oraclelinux-7
-  - name: almalinux-8-3004-0-py3
+      image: saltimages/salt-3004.1-py3:oraclelinux-7
+  - name: almalinux-8-3004-1-py3
     driver:
-      image: saltimages/salt-3004.0-py3:almalinux-8
-  - name: rockylinux-8-3004-0-py3
+      image: saltimages/salt-3004.1-py3:almalinux-8
+  - name: rockylinux-8-3004-1-py3
     driver:
-      image: saltimages/salt-3004.0-py3:rockylinux-8
+      image: saltimages/salt-3004.1-py3:rockylinux-8
 
-  ## SALT `3003.3`
-  - name: centos-stream8-3003-3-py3
+  ## SALT `3003.4`
+  - name: centos-stream8-3003-4-py3
     driver:
-      image: saltimages/salt-3003.3-py3:centos-stream8
-  - name: centos-7-3003-3-py3
+      image: saltimages/salt-3003.4-py3:centos-stream8
+  - name: centos-7-3003-4-py3
     driver:
-      image: saltimages/salt-3003.3-py3:centos-7
-  - name: amazonlinux-2-3003-3-py3
+      image: saltimages/salt-3003.4-py3:centos-7
+  - name: amazonlinux-2-3003-4-py3
     driver:
-      image: saltimages/salt-3003.3-py3:amazonlinux-2
-  - name: oraclelinux-8-3003-3-py3
+      image: saltimages/salt-3003.4-py3:amazonlinux-2
+  - name: oraclelinux-8-3003-4-py3
     driver:
-      image: saltimages/salt-3003.3-py3:oraclelinux-8
-  - name: oraclelinux-7-3003-3-py3
+      image: saltimages/salt-3003.4-py3:oraclelinux-8
+  - name: oraclelinux-7-3003-4-py3
     driver:
-      image: saltimages/salt-3003.3-py3:oraclelinux-7
-  - name: almalinux-8-3003-3-py3
+      image: saltimages/salt-3003.4-py3:oraclelinux-7
+  - name: almalinux-8-3003-4-py3
     driver:
-      image: saltimages/salt-3003.3-py3:almalinux-8
+      image: saltimages/salt-3003.4-py3:almalinux-8
 
-  ## SALT `3002.7`
-  - name: centos-7-3002-7-py3
+  ## SALT `3002.8`
+  - name: centos-7-3002-8-py3
     driver:
-      image: saltimages/salt-3002.7-py3:centos-7
-  - name: amazonlinux-2-3002-7-py3
+      image: saltimages/salt-3002.8-py3:centos-7
+  - name: amazonlinux-2-3002-8-py3
     driver:
-      image: saltimages/salt-3002.7-py3:amazonlinux-2
-  - name: oraclelinux-8-3002-7-py3
+      image: saltimages/salt-3002.8-py3:amazonlinux-2
+  - name: oraclelinux-8-3002-8-py3
     driver:
-      image: saltimages/salt-3002.7-py3:oraclelinux-8
-  - name: oraclelinux-7-3002-7-py3
+      image: saltimages/salt-3002.8-py3:oraclelinux-8
+  - name: oraclelinux-7-3002-8-py3
     driver:
-      image: saltimages/salt-3002.7-py3:oraclelinux-7
+      image: saltimages/salt-3002.8-py3:oraclelinux-7
 
 verifier:
   # https://www.inspec.io/
