@@ -14,8 +14,8 @@ epel
    :scale: 100%
    :target: https://github.com/semantic-release/semantic-release
 
-Install the EPEL RPM and GPG key on RHEL 5/6/7/8, CentOS 5/6/7/8, Amazon Linux, or
-Oracle Linux 5/6/7/8.
+Install the EPEL RPM and GPG key on RHEL 7/8, CentOS 7/8, Amazon Linux 2,
+Oracle Linux 7/8, AlmaLinux 8, or Rocky Linux 8.
 
 .. contents:: **Table of Contents**
 
