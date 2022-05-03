@@ -1,5 +1,17 @@
 # Changelog
 
+# [1.16.0](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.8...v1.16.0) (2022-05-03)
+
+
+### Continuous Integration
+
+* **kitchen+gitlab:** update for new pre-salted images [skip ci] ([8b6a274](https://github.com/saltstack-formulas/epel-formula/commit/8b6a27467c5d62b550c9f10c800057bde3a07eae))
+
+
+### Features
+
+* **map:** migrate to latest package paradigm ([a18fea4](https://github.com/saltstack-formulas/epel-formula/commit/a18fea4c3eff6a42d92a46366a99c4bcf83a09fb))
+
 ## [1.15.8](https://github.com/saltstack-formulas/epel-formula/compare/v1.15.7...v1.15.8) (2022-03-29)
 
 
