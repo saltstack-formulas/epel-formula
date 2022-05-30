@@ -2,6 +2,12 @@
     'common': {
       'disabled': False,
       'testing': False,
+      'retry_options': {
+        'attempts': 3,
+        'until': True,
+        'interval': 10,
+        'splay': 10,
+      },
     },
     'Amazon': salt['grains.filter_by']({
       2: {

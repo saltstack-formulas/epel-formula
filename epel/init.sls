@@ -15,6 +15,7 @@ epel_release:
       - epel-release: {{ epel.rpm }}
     - require:
       - file: install_pubkey_epel
+    - retry: {{ epel.retry_options | json }}
 
 {% if 'repos' in epel %}
 {% for repo, config in epel.repos.items() %}
