@@ -2,6 +2,21 @@
 Changelog
 =========
 
+`1.16.1 <https://github.com/saltstack-formulas/epel-formula/compare/v1.16.0...v1.16.1>`_ (2022-06-07)
+---------------------------------------------------------------------------------------------------------
+
+Code Refactoring
+^^^^^^^^^^^^^^^^
+
+
+* **init.sls:** apply pkg.installed retries (\ `c9be894 <https://github.com/saltstack-formulas/epel-formula/commit/c9be894c8dff96e9ad6644001245102e5b6e7b38>`_\ )
+
+Tests
+^^^^^
+
+
+* **system.rb:** add support for ``mac_os_x`` [skip ci] (\ `00bf3aa <https://github.com/saltstack-formulas/epel-formula/commit/00bf3aaf09d84d78b04e12955650737855abbffa>`_\ )
+
 `1.16.0 <https://github.com/saltstack-formulas/epel-formula/compare/v1.15.8...v1.16.0>`_ (2022-05-03)
 ---------------------------------------------------------------------------------------------------------
 
