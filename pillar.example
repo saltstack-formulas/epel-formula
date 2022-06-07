@@ -36,3 +36,10 @@ epel:
         enabled: false
       epel-testing-source:
         enabled: false
+
+    # https://docs.saltproject.io/en/latest/ref/states/requisites.html#retrying-states
+    retry_options:
+      attempts: 3
+      until: true
+      interval: 10
+      splay: 10
