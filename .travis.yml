@@ -110,10 +110,6 @@ jobs:
     # - env: INSTANCE=default-oraclelinux-8-3003-4-py3
     # - env: INSTANCE=default-oraclelinux-7-3003-4-py3
     # - env: INSTANCE=default-almalinux-8-3003-4-py3
-    # - env: INSTANCE=default-centos-7-3002-8-py3
-    # - env: INSTANCE=default-amazonlinux-2-3002-8-py3
-    # - env: INSTANCE=default-oraclelinux-8-3002-8-py3
-    # - env: INSTANCE=default-oraclelinux-7-3002-8-py3
 
     ## Define the release stage that runs `semantic-release`
     - stage: 'release'
